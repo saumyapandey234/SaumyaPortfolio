@@ -1,0 +1,156 @@
+.about-logo-container {
+	display: flex;
+	justify-content: left;
+	padding-top: 25px;
+}
+
+.about-logo {
+	display: flex;
+	position: fixed;
+	border: 1px solid white;
+	border-radius: 50%;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+	top: 4vh;
+}
+
+.about-container {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	margin: 0;
+	padding-top: 120px;
+}
+
+.about-main {
+  display: flex;
+  gap: 50px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.about-right-side {
+  flex-basis: auto;
+  width: 70%;
+  max-width: 800px;
+}
+
+
+.about-title {
+	width: 100% !important;
+}
+
+.about-subtitle {
+  width: 100% !important;
+  max-width: 760px;
+}
+
+.about-left-side {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 260px;
+  max-width: 260px;
+}
+
+.about-image-container {
+  width: 200px;
+  max-width: 100%;
+  margin-bottom: 18px;
+}
+.about-image-wrapper {
+	display: inline-block;
+	overflow: hidden;
+	width: 100%;
+	border-radius: 10%;
+	transform: rotate(3deg);
+}
+
+.about-image-wrapper img {
+	display: block;
+	width: 100%;
+}
+
+.about-socials {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.about-socials-mobile {
+	display: none;
+}
+
+@media (max-width: 1024px) {
+	.about-logo {
+		z-index: 100;
+	}
+
+	.about-main {
+		flex-direction: column;
+	}
+
+	.about-subtitle {
+		padding-top: 20px !important;
+	}
+
+	.about-left-side {
+		flex-basis: 100%;
+		order: 1;
+	}
+
+	.about-right-side {
+		flex-basis: 100%;
+		order: 2;
+	}
+
+	.about-image-container {
+		padding-bottom: 40px;
+	}
+
+	.about-socials {
+		display: none;
+	}
+
+	.about-socials-mobile {
+		padding-top: 30px;
+		display: flex;
+	}
+}
+
+@media (max-width: 600px) {
+	.about-container {
+		padding-top: 60px;
+	}
+
+	.about-image-container {
+		width: 60%;
+	}
+}
+
+.skills-card {
+  width: 95%;
+  background: white;
+  border-radius: 12px;
+  padding: 14px;
+  margin-top: 16px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.07);
+  display: flex;
+  justify-content: center;
+}
+
+.skills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.skills-row span {
+  font-size: 13px;
+  background: #f3f3f5;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: #222;
+  white-space: nowrap;
+}
