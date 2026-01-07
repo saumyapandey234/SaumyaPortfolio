@@ -28,16 +28,22 @@ const Contact = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			await fetch("http://localhost:8095/api/contacts", {
-				method: "POST",
-				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify(form),
-			});
+			const res = await fetch(
+				`${process.env.REACT_APP_BACKEND_URL}/api/contacts`,
+				{
+					method: "POST",
+					headers: { "Content-Type": "application/json" },
+					body: JSON.stringify(form),
+				}
+			);
+
+			if (!res.ok) throw new Error("API error");
 
 			alert("Message sent!");
 			setForm({ name: "", email: "", message: "" });
-		} catch {
+		} catch (err) {
 			alert("Failed to submit!");
+			console.error(err);
 		}
 	};
 
