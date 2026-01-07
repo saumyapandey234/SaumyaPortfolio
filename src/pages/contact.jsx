@@ -28,7 +28,7 @@ const Contact = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const res = await fetch(
+			const a = await fetch(
 				"https://portfoliobackend-4dzs.onrender.com/api/contacts",
 				{
 					method: "POST",
@@ -36,14 +36,12 @@ const Contact = () => {
 					body: JSON.stringify(form),
 				}
 			);
-
-			if (!res.ok) throw new Error("API error");
-
 			alert("Message sent!");
+			console.log(a);
 			setForm({ name: "", email: "", message: "" });
-		} catch (err) {
+		} catch (s) {
 			alert("Failed to submit!");
-			console.error(err);
+			console.log(s);
 		}
 	};
 
