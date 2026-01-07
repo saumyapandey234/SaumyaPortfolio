@@ -29,7 +29,7 @@ const Contact = () => {
 		e.preventDefault();
 		try {
 			const res = await fetch(
-				`${process.env.REACT_APP_BACKEND_URL}/api/contacts`,
+				"https://portfoliobackend-4dzs.onrender.com/api/contacts",
 				{
 					method: "POST",
 					headers: { "Content-Type": "application/json" },
