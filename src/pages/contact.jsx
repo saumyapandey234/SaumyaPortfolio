@@ -85,23 +85,22 @@ const Contact = () => {
 						</div>
 					</div>
 
-					<div className="socials-container">
-						<div className="contact-socials">
+					<div className="socials-container flex flex-col md:flex-row justify-between items-start w-full gap-6 px-4 md:px-8 py-6">
+						<div className="contact-socials w-full md:w-auto flex justify-center md:justify-start">
 							<Socials />
 						</div>
 
-						{/* Contact Form Card */}
-						<div className="contact-card">
-							<div className="card-header">
+						<div className="contact-card w-full sm:w-[340px] md:w-[300px] bg-gradient-to-br from-white to-slate-50 rounded-2xl p-5 shadow-xl border border-slate-200 hover:-translate-y-1 transition-transform">
+							<div className="card-header text-xl font-extrabold bg-gradient-to-r from-slate-900 to-slate-600 bg-clip-text text-transparent mb-1">
 								Let's Work Together
 							</div>
-							<div className="card-sub">
+							<div className="card-sub text-sm text-slate-600 font-medium mb-4">
 								Or grab a coffee, virtually ☕
 							</div>
 
 							<form
 								onSubmit={handleSubmit}
-								className="contact-form"
+								className="contact-form flex flex-col gap-3 w-full"
 							>
 								<input
 									type="text"
@@ -110,6 +109,7 @@ const Contact = () => {
 									value={form.name}
 									onChange={handleChange}
 									required
+									className="w-full px-4 py-2 text-sm border border-slate-300 rounded-xl focus:border-slate-900 focus:ring-4 focus:ring-slate-800/10 transition"
 								/>
 
 								<input
@@ -119,6 +119,7 @@ const Contact = () => {
 									value={form.email}
 									onChange={handleChange}
 									required
+									className="w-full px-4 py-2 text-sm border border-slate-300 rounded-xl focus:border-slate-900 focus:ring-4 focus:ring-slate-800/10 transition"
 								/>
 
 								<textarea
@@ -127,9 +128,15 @@ const Contact = () => {
 									value={form.message}
 									onChange={handleChange}
 									required
+									className="w-full h-24 px-4 py-2 text-sm border border-slate-300 rounded-xl focus:border-slate-900 focus:ring-4 focus:ring-slate-800/10 resize-none transition"
 								/>
 
-								<button type="submit">Submit</button>
+								<button
+									type="submit"
+									className="w-full bg-gradient-to-r from-slate-900 to-slate-800 text-white font-semibold py-2 rounded-xl hover:opacity-90 hover:scale-[1.02] transition shadow-md"
+								>
+									Send Message
+								</button>
 							</form>
 						</div>
 					</div>
